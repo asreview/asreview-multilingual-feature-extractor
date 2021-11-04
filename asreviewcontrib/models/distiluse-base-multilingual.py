@@ -28,15 +28,16 @@ def _check_st():
     if not ST_AVAILABLE:
         raise ImportError(
             "Install sentence-transformers package"
-            " to use Sentence BERT.")
+            " to use distiluse-base-multilingual-cased-v1.")
 
 
-class SBERT(BaseFeatureExtraction):
-    """Sentence BERT feature extraction technique.
+class multilingualSentenceTransformer(BaseFeatureExtraction):
+    """distiluse-base-multilingual-cased-v1 feature extraction technique.
 
-    Feature extraction technique based on Sentence BERT. Implementation based on
-    the `sentence_transformers <https://github.com/UKPLab/sentence-
-    transformers>`__ package. It is relatively slow.
+    Feature extraction technique based on distiluse-base-multilingual-cased-v1.
+    Implementation based on the `sentence_transformers
+    <https://github.com/UKPLab/sentence- transformers>`__ package. It is
+    relatively slow.
 
     .. note::
 
@@ -46,13 +47,14 @@ class SBERT(BaseFeatureExtraction):
 
     """
 
-    name = "sbert"
-    label = "Sentence BERT"
+    name = "multilingual"
+    label = "Multilingual Sentence transformer"
 
     def transform(self, texts):
 
         _check_st()
 
-        model = SentenceTransformer('bert-base-nli-mean-tokens')
+        model = SentenceTransformer(
+            'sentence-transformers/distiluse-base-multilingual-cased-v1')
         X = np.array(model.encode(texts))
         return X
