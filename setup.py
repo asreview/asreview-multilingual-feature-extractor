@@ -2,10 +2,10 @@ from setuptools import setup
 from setuptools import find_namespace_packages
 
 setup(
-    name='asreview-template-model-extension',
+    name='asreview-multilingual-feature-extractor',
     version='0.1',
-    description='Example classifier extension',
-    url='https://github.com/asreview/asreview',
+    description='A feature extractor based on distiluse-base-multilingual-cased-v1.',
+    url='https://github.com/asreview/asreview-multilingual-feature-extractor',
     author='ASReview team',
     author_email='asreview@uu.nl',
     classifiers=[
@@ -15,19 +15,20 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    keywords='systematic review',
+    keywords='systematic review multilingual feature extractor',
     packages=find_namespace_packages(include=['asreviewcontrib.*']),
     python_requires='~=3.6',
     install_requires=[
         'sklearn',
-        'asreview>=0.13'
+        'asreview>=0.13',
+        'sentence_transformers'
     ],
     entry_points={
         'asreview.models.classifiers': [
-            'nb_example = asreviewcontrib.models.nb_default_param:NaiveBayesDefaultParamsModel',
+            # define classifier algorithms
         ],
         'asreview.models.feature_extraction': [
-            # define feature_extraction algorithms
+            'nb_example = asreviewcontrib.models.distiluse-base-multilingual:NaiveBayesDefaultParamsModel',
         ],
         'asreview.models.balance': [
             # define balance strategy algorithms
@@ -37,7 +38,7 @@ setup(
         ]
     },
     project_urls={
-        'Bug Reports': 'https://github.com/asreview/asreview/issues',
-        'Source': 'https://github.com/asreview/asreview/',
+        'Bug Reports': 'https://github.com/asreview/asreview-multilingual-feature-extractor/issues',
+        'Source': 'https://github.com/asreview/asreview-multilingual-feature-extractor/',
     },
 )
