@@ -28,7 +28,7 @@ setup(
             # define classifier algorithms
         ],
         'asreview.models.feature_extraction': [
-            'nb_example = asreviewcontrib.models.distiluse-base-multilingual:NaiveBayesDefaultParamsModel',
+            'multilingual = asreviewcontrib.models.distiluse-base-multilingual:multilingualSentenceTransformer',
         ],
         'asreview.models.balance': [
             # define balance strategy algorithms
