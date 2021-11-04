@@ -31,7 +31,7 @@ def _check_st():
             " to use distiluse-base-multilingual-cased-v1.")
 
 
-class multilingualSentenceTransformer(BaseFeatureExtraction):
+class MultilingualSentenceTransformer(BaseFeatureExtraction):
     """distiluse-base-multilingual-cased-v1 feature extraction technique.
 
     Feature extraction technique based on distiluse-base-multilingual-cased-v1.

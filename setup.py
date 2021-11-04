@@ -28,7 +28,7 @@ setup(
             # define classifier algorithms
         ],
         'asreview.models.feature_extraction': [
-            'multilingual = asreviewcontrib.models.distiluse-base-multilingual:multilingualSentenceTransformer',
+            'multilingual = asreviewcontrib.models.distiluse_base_multilingual:MultilingualSentenceTransformer',
         ],
         'asreview.models.balance': [
             # define balance strategy algorithms

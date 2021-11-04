@@ -1,1 +1,1 @@
-from asreviewcontrib.models.distiluse-base-multilingual import multilingualSentenceTransformer
+from asreviewcontrib.models.distiluse_base_multilingual import MultilingualSentenceTransformer
