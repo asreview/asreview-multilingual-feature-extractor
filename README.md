@@ -1,7 +1,10 @@
 # ASReview multilingual feature extractor
 
 This extension to ASReview implements a multilingual feature extractor algorithm.
-This algorithm allows for the usage of records in multiple languages.
+This algorithm allows for the usage of records in multiple languages. These 
+languages are:
+
+Arabic, Chinese, Dutch, English, French, German, Italian, Korean, Polish, Portuguese, Russian, Spanish, Turkish. 
 
 The extension implements [`sentence-transformers/distiluse-base-multilingual-cased-v1`](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v1).
 This is a sentence-transformers model and maps sentences to a 512 dimensional dense
