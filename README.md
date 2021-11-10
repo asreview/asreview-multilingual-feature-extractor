@@ -1,12 +1,19 @@
-# ASReview plugin implementing a multilingual feature extractor
-This repo contains a plugin implementing 
-[`sentence-transformers/distiluse-base-multilingual-cased-v1`](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v1).
+# ASReview multilingual feature extractor
 
-This special sentence tranformer allows for the usage of records in multiple languages.
+This extension to ASReview implements a multilingual feature extractor algorithm.
+This algorithm allows for the usage of records in multiple languages.
 
-## Getting started
+The extension implements [`sentence-transformers/distiluse-base-multilingual-cased-v1`](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v1).
+This is a sentence-transformers model and maps sentences to a 512 dimensional dense
+vector space and is multilingual. For more information about the feature extraction
+method, see 
 
-To install the new feature extractor use:
+> Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. ArXiv, abs/1908.10084. https://arxiv.org/abs/1908.10084
+
+
+## Installation
+
+Install the multilingual feature extractor with:
 
 ```bash
 pip install .
@@ -18,10 +25,18 @@ or
 pip install git+https://github.com/asreview/asreview-multilingual-feature-extractor.git
 ```
 
-
 ## Usage
 
-The new feature extractor `Multilingual Sentence transformer` is defined in
+### ASReview LAB
+
+ASReview LAB users can select the model in the
+[Model Selection](https://asreview.readthedocs.io/en/latest/features/pre_screening.html#select-model)
+step of the project setup. Select "Multilingual Sentence Transformer" under
+"Feature extraction". 
+
+### Simulation
+
+The new feature extractor `Multilingual Sentence Transformer` is defined in
 [`asreviewcontrib/models/distiluse-base-multilingual.py`](asreviewcontrib/models/distiluse-base-multilingual.py) 
 and can be used in a simulation.
 
@@ -37,4 +52,8 @@ asreview simulate benchmark:van_de_Schoot_2017 -e multilingual -m svm
 
 ## License
 
-MIT license
+[MIT license](/LICENSE)
+
+## Contact
+
+For any questions or remarks, please send an email to asreview@uu.nl or open an issue.
