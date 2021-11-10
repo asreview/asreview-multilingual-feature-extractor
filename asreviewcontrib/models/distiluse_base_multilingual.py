@@ -34,7 +34,7 @@ class MultilingualSentenceTransformer(BaseFeatureExtraction):
     """
 
     name = "multilingual"
-    label = "Multilingual Sentence transformer"
+    label = "Multilingual Sentence Transformer"
 
     def transform(self, texts):
 
