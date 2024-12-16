@@ -19,7 +19,7 @@ setup(
     packages=find_namespace_packages(include=['asreviewcontrib.*']),
     python_requires='~=3.6',
     install_requires=[
-        'sklearn',
+        'scikit-learn',
         'asreview>=0.13',
         'sentence_transformers'
     ],
